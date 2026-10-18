@@ -32,3 +32,7 @@ Runs sandboxed in Hostwerk – no access to logins, settings or files.
 This repository is also an example for the [Hostwerk extension SDK](https://github.com/Passimoritz/hostwerk-public/blob/main/sdk/README.md): design kit, translations, settings, storage, events, check and releases.
 
 License: MIT
+
+## Tests
+
+Logic that does not need the page goes into `page/lib.js` – it runs in the browser and in `tests/lib.test.js` (`node --test tests/*.test.js`). The workflow runs the tests and the Hostwerk check on every push.

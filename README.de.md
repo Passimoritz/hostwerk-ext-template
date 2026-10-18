@@ -32,3 +32,7 @@ Läuft in Hostwerk abgeschottet – kein Zugriff auf Anmeldungen, Einstellungen 
 Dieses Repository ist auch ein Beispiel für das [Hostwerk-Erweiterungs-SDK](https://github.com/Passimoritz/hostwerk-public/blob/main/sdk/README.de.md): Design-Baukasten, Übersetzungen, Einstellungen, Speicher, Ereignisse, Prüfung und Releases.
 
 Lizenz: MIT
+
+## Tests
+
+Logik, die keine Seite braucht, gehört nach `page/lib.js` – sie läuft im Browser und in `tests/lib.test.js` (`node --test tests/*.test.js`). Der Workflow führt bei jedem Push die Tests und die Hostwerk-Prüfung aus.

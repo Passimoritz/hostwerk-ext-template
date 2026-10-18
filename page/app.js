@@ -4,8 +4,8 @@ const { html, t } = Hostwerk;
 // Show the services. Hostwerk.html escapes every ${value}, so names can never break the page.
 async function loadServices() {
   const settings = await Hostwerk.settings.get();
-  let list = await Hostwerk.services();
-  if (settings.onlyRunning) list = list.filter((s) => s.state === 'running');
+  // The filtering/sorting lives in lib.js, so it can be tested without a browser
+  const list = MyExtension.visible(await Hostwerk.services(), { onlyRunning: !!settings.onlyRunning });
   Hostwerk.render('#list', list.length
     ? html`${list.map((s) => html`
         <div class="hw-card">
