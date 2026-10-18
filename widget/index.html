@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="/ext-sdk.js"></script>
+</head>
+<body>
+  <!-- Dashboard tile: no padding, transparent background – Hostwerk draws the frame. The height follows the content. -->
+  <div class="hw-stat">
+    <div class="hw-k" data-i18n="tileTitle"></div>
+    <div class="hw-v" id="v">–</div>
+    <div class="hw-s" data-i18n="tileHint"></div>
+  </div>
+  <script>
+    async function load() {
+      const list = await Hostwerk.services();
+      document.getElementById('v').textContent = `${list.filter((s) => s.state === 'running').length} / ${list.length}`;
+    }
+    Hostwerk.ready().then(() => { load(); Hostwerk.on('service', load); });
+  </script>
+</body>
+</html>

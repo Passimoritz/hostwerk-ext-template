@@ -1,0 +1,14 @@
+{
+  "title": "My Extension",
+  "intro": "Hello! This page belongs to your extension – edit page/index.html and page/app.js.",
+  "countButton": "Click me",
+  "clicked": "Clicked {n}× (kept across restarts)",
+  "milestone": "{n} clicks already!",
+  "settings": "Settings",
+  "services": "Your services",
+  "running": "running",
+  "stopped": "stopped",
+  "empty": "No services",
+  "tileTitle": "Services",
+  "tileHint": "running right now"
+}

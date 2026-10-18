@@ -1,0 +1,14 @@
+{
+  "title": "Meine Erweiterung",
+  "intro": "Hallo! Diese Seite gehört zu deiner Erweiterung – passe page/index.html und page/app.js an.",
+  "countButton": "Klick mich",
+  "clicked": "{n}× geklickt (bleibt gespeichert)",
+  "milestone": "Schon {n} Klicks!",
+  "settings": "Einstellungen",
+  "services": "Deine Dienste",
+  "running": "läuft",
+  "stopped": "gestoppt",
+  "empty": "Keine Dienste",
+  "tileTitle": "Dienste",
+  "tileHint": "laufen gerade"
+}

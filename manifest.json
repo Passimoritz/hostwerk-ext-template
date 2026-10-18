@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Passimoritz/hostwerk-public/main/sdk/manifest.schema.json",
+  "id": "my-extension",
+  "name": { "de": "Meine Erweiterung", "en": "My Extension" },
+  "description": {
+    "de": "Startpunkt für eigene Hostwerk-Erweiterungen: Seite, Kachel, Einstellungen und Übersetzungen.",
+    "en": "Starting point for your own Hostwerk extensions: page, tile, settings and translations."
+  },
+  "version": "1.0.0",
+  "author": "Your name",
+  "homepage": "https://github.com/Passimoritz/hostwerk-ext-template",
+  "license": "MIT",
+  "icon": "icon.svg",
+  "color": "#7c5cff",
+  "hostwerk": ">=2.9.0",
+  "permissions": ["read:services", "storage"],
+  "page": { "title": { "de": "Meine Erweiterung", "en": "My Extension" }, "icon": "puzzle", "file": "page/index.html" },
+  "widget": { "title": { "de": "Meine Kachel", "en": "My tile" }, "file": "widget/index.html", "size": "third" },
+  "settings": [
+    { "key": "greeting", "type": "text", "label": { "de": "Begrüßung", "en": "Greeting" }, "default": "" },
+    { "key": "onlyRunning", "type": "switch", "label": { "de": "Nur laufende Dienste", "en": "Only running services" }, "default": false }
+  ]
+}
