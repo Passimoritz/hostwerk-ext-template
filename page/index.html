@@ -3,22 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- 1) The SDK: talks to Hostwerk and loads the design kit (hw-card, hw-btn, var(--hw-…)). Always first. -->
+  <!-- 1) The SDK: talks to Hostwerk and loads the design kit (card card-pad, btn, var(--hw-…)). Always first. -->
   <script src="/ext-sdk.js"></script>
 </head>
 <body>
   <!-- 2) Texts come from locales/de.json and locales/en.json – data-i18n="key" fills them in. -->
-  <h1 data-i18n="title"></h1>
-  <p class="hw-sub" id="hello" data-i18n="intro"></p>
+  <p class="muted" id="hello" data-i18n="intro"></p>
 
-  <div class="hw-row" style="margin-bottom:14px">
-    <button class="hw-btn hw-primary" id="count" data-i18n="countButton"></button>
-    <span class="hw-muted" id="counter"></span>
-    <button class="hw-btn hw-ghost" id="settings" data-i18n="settings"></button>
+  <div class="row" style="margin-bottom:14px">
+    <button class="btn primary" id="count" data-i18n="countButton"></button>
+    <span class="muted" id="counter"></span>
+    <button class="btn ghost" id="settings" data-i18n="settings"></button>
   </div>
 
   <h2 data-i18n="services"></h2>
-  <div id="list" class="hw-grid"><div class="hw-skeleton" style="height:64px"></div></div>
+  <div id="list" class="grid-auto"><div class="hw-skeleton" style="height:64px"></div></div>
 
   <!-- 3) Your logic in a separate file (scripts from the internet are not allowed – bundle everything). -->
   <script src="lib.js"></script>

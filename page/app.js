@@ -8,11 +8,11 @@ async function loadServices() {
   const list = MyExtension.visible(await Hostwerk.services(), { onlyRunning: !!settings.onlyRunning });
   Hostwerk.render('#list', list.length
     ? html`${list.map((s) => html`
-        <div class="hw-card">
-          <div class="hw-row"><span class="hw-dot ${s.state === 'running' ? 'hw-ok' : ''}"></span><b class="hw-grow hw-ellipsis">${s.name}</b>
-          <span class="hw-badge ${s.state === 'running' ? 'hw-ok' : ''}">${t(s.state === 'running' ? 'running' : 'stopped')}</span></div>
+        <div class="card card-pad">
+          <div class="row"><span class="dot ${s.state === 'running' ? 'ok' : ''}"></span><b class="grow ellipsis">${s.name}</b>
+          <span class="badge ${s.state === 'running' ? 'ok' : ''}">${t(s.state === 'running' ? 'running' : 'stopped')}</span></div>
         </div>`)}`
-    : html`<div class="hw-card hw-empty"><b>${t('empty')}</b></div>`);
+    : html`<div class="card card-pad empty"><b>${t('empty')}</b></div>`);
 }
 
 // A greeting from the settings (the form is drawn by Hostwerk from manifest.settings).
