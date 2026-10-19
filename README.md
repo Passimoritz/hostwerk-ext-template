@@ -1,3 +1,5 @@
+![My Extension](banner.svg)
+
 # Hostwerk extension template
 
 **English** · [Deutsch](README.de.md)

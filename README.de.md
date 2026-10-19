@@ -1,3 +1,5 @@
+![Meine Erweiterung](banner.svg)
+
 # Vorlage für Hostwerk-Erweiterungen
 
 [English](README.md) · **Deutsch**
