@@ -10,5 +10,8 @@
   "stopped": "stopped",
   "empty": "No services",
   "tileTitle": "Services",
-  "tileHint": "running right now"
+  "tileHint": "running right now",
+  "loadFailed": "Couldn’t load the services",
+  "retry": "Try again",
+  "tileFailed": "Not reachable"
 }

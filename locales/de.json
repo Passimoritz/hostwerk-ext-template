@@ -10,5 +10,8 @@
   "stopped": "gestoppt",
   "empty": "Keine Dienste",
   "tileTitle": "Dienste",
-  "tileHint": "laufen gerade"
+  "tileHint": "laufen gerade",
+  "loadFailed": "Dienste konnten nicht geladen werden",
+  "retry": "Erneut versuchen",
+  "tileFailed": "Nicht erreichbar"
 }

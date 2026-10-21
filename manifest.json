@@ -9,7 +9,7 @@
     "de": "Startpunkt für eigene Hostwerk-Erweiterungen: Seite, Kachel, Einstellungen und Übersetzungen.",
     "en": "Starting point for your own Hostwerk extensions: page, tile, settings and translations."
   },
-  "version": "1.2.0",
+  "version": "1.3.0",
   "author": "Your name",
   "homepage": "https://github.com/Passimoritz/hostwerk-ext-template",
   "license": "MIT",
@@ -17,7 +17,7 @@
   "banner": "banner.svg",
   "color": "#7c5cff",
   "category": "developer",
-  "hostwerk": ">=2.9.0",
+  "hostwerk": ">=2.11.0",
   "permissions": [
     "read:services",
     "storage"
@@ -32,6 +32,9 @@
     "description": {
       "de": "Startpunkt für eigene Hostwerk-Erweiterungen: Seite, Kachel, Einstellungen und Übersetzungen.",
       "en": "Starting point for your own Hostwerk extensions: page, tile, settings and translations."
+    },
+    "nav": {
+      "group": "develop"
     }
   },
   "widget": {
@@ -61,5 +64,38 @@
       },
       "default": false
     }
-  ]
+  ],
+  "settingsTab": "extensions",
+  "contributes": {
+    "new": [
+      {
+        "id": "count",
+        "title": {
+          "de": "Klick zählen",
+          "en": "Count a click"
+        },
+        "icon": "sparkles"
+      }
+    ],
+    "shortcuts": [
+      {
+        "id": "open",
+        "title": {
+          "de": "Meine Erweiterung öffnen",
+          "en": "Open My Extension"
+        },
+        "keys": "ctrl+alt+m"
+      }
+    ]
+  },
+  "allowExtensions": {
+    "my-addon": [
+      "tabs",
+      "actions",
+      "settings"
+    ],
+    "*": [
+      "tabs"
+    ]
+  }
 }

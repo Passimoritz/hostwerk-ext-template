@@ -8,5 +8,10 @@
   function visible(list, { onlyRunning = false } = {}) {
     return [...(list || [])].filter((s) => !onlyRunning || s.state === 'running').sort((a, b) => String(a.name).localeCompare(String(b.name)));
   }
-  return { visible };
+  /** Short, readable reason for a failed call (Hostwerk errors carry a message; never show a stack trace). */
+  function errorText(e) {
+    const msg = e && (e.message || e.error || (typeof e === 'string' ? e : ''));
+    return String(msg || '').split('\n')[0].slice(0, 200);
+  }
+  return { visible, errorText };
 }));

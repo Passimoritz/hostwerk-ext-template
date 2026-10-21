@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,15 +9,27 @@
   <!-- Dashboard tile: no padding, transparent background – Hostwerk draws the frame. The height follows the content. -->
   <div class="stat">
     <div class="k" data-i18n="tileTitle"></div>
-    <div class="v" id="v">–</div>
-    <div class="hw-s" data-i18n="tileHint"></div>
+    <div class="v" id="v" aria-live="polite">–</div>
+    <div class="s" id="hint" data-i18n="tileHint"></div>
+    <!-- Errors are part of the tile: a short reason and a retry instead of a "–" that stays forever -->
+    <button type="button" class="btn xs" id="retry" hidden data-i18n="retry"></button>
   </div>
   <script>
     async function load() {
-      const list = await Hostwerk.services();
-      document.getElementById('v').textContent = `${list.filter((s) => s.state === 'running').length} / ${list.length}`;
+      const v = document.getElementById('v'), hint = document.getElementById('hint'), retry = document.getElementById('retry');
+      try {
+        const list = await Hostwerk.services();
+        v.textContent = `${Hostwerk.fmt.number(list.filter((s) => s.state === 'running').length)} / ${Hostwerk.fmt.number(list.length)}`;
+        hint.textContent = Hostwerk.t('tileHint');
+        retry.hidden = true;
+      } catch {
+        v.textContent = '–';
+        hint.textContent = Hostwerk.t('tileFailed');
+        retry.hidden = false;
+      }
     }
-    Hostwerk.ready().then(() => { load(); Hostwerk.on('service', load); });
+    document.getElementById('retry').addEventListener('click', load);
+    Hostwerk.ready().then(() => { load(); Hostwerk.on('service', load); Hostwerk.on('lang', load); });
   </script>
 </body>
 </html>

@@ -7,10 +7,23 @@
 Start your own Hostwerk extension here: **Use this template**, rename it, done. A working page, a dashboard tile, settings, storage, German and English texts – plus a GitHub Action that checks every push and publishes a release for every tag.
 
 
+## Which template fits?
+
+| You want to … | Template |
+|---|---|
+| a page and/or a dashboard tile with Hostwerk's data | **this one** (`hostwerk-ext-template`) |
+| your own server code (routes, files, webhooks), sandboxed | [hostwerk-ext-template-backend](https://github.com/Passimoritz/hostwerk-ext-template-backend) |
+| add a tab, header action or settings to *another* extension | [hostwerk-ext-template-extend](https://github.com/Passimoritz/hostwerk-ext-template-extend) |
+| replace or extend named places of Hostwerk (greeting, empty lists) | [hostwerk-ext-template-override](https://github.com/Passimoritz/hostwerk-ext-template-override) |
+| tabs on Minecraft/web server pages, right-click and quick search entries | [hostwerk-ext-template-service-tab](https://github.com/Passimoritz/hostwerk-ext-template-service-tab) |
+| a colour theme (light and dark, accents, rounding, density) | [hostwerk-ext-template-theme](https://github.com/Passimoritz/hostwerk-ext-template-theme) |
+
 ## Features
 
-- `manifest.json` with page, tile, settings and permissions
-- `page/app.js` – services list, settings, storage counter, live events (commented step by step)
+- `manifest.json` with page, tile, settings and permissions – plus the current SDK fields: `page.nav` (place in the sidebar), `settingsTab` (settings inside Hostwerk's settings), `contributes.new` (an entry in the "New" menu), `contributes.shortcuts` (Ctrl+Alt+M) and `allowExtensions` (other extensions may add tabs – the [add-on template](https://github.com/Passimoritz/hostwerk-ext-template-extend) uses that)
+- `page/app.js` – services list, settings, storage counter, live events, error state with "Try again", polling that pauses while hidden (commented step by step)
+- `widget/index.html` – tile with its own error state
+- Sizes only from Hostwerk's design scale (`var(--sp-*)`, `var(--fs-*)`, `var(--r-*)`)
 - `locales/de.json` + `locales/en.json`
 - Check & release workflow (same rules as the Hostwerk catalog)
 
