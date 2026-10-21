@@ -1,3 +1,7 @@
+## 1.3.1
+
+- Buttons have a name for screen readers right away, before the language has loaded. / Knöpfe haben sofort einen Namen für Bildschirmleser, schon bevor die Sprache geladen ist.
+
 ## 1.3.0
 
 - Allows add-ons: `"allowExtensions": { "my-addon": ["tabs", "actions", "settings"], "*": ["tabs"] }` – the example pair with hostwerk-ext-template-extend now actually works. / Erlaubt Zusätze – das Beispiel-Paar mit hostwerk-ext-template-extend funktioniert jetzt wirklich.
