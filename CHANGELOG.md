@@ -1,3 +1,7 @@
+## 1.3.2
+
+- The example counter talks calmly like Hostwerk (no exclamation mark) – the template shows the house style. / Der Beispiel-Zähler spricht ruhig wie Hostwerk (ohne Ausrufezeichen) – die Vorlage zeigt den Hausstil.
+
 ## 1.3.1
 
 - Buttons have a name for screen readers right away, before the language has loaded. / Knöpfe haben sofort einen Namen für Bildschirmleser, schon bevor die Sprache geladen ist.
