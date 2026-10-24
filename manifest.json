@@ -9,7 +9,7 @@
     "de": "Startpunkt für eigene Hostwerk-Erweiterungen: Seite, Kachel, Einstellungen und Übersetzungen.",
     "en": "Starting point for your own Hostwerk extensions: page, tile, settings and translations."
   },
-  "version": "1.3.2",
+  "version": "1.3.3",
   "author": "Your name",
   "homepage": "https://github.com/Passimoritz/hostwerk-ext-template",
   "license": "MIT",

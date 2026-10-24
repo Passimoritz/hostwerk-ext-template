@@ -1,3 +1,7 @@
+## 1.3.3
+
+- New animated icon and banner in the common Hostwerk style (isometric block). / Neues animiertes Symbol und Banner im gemeinsamen Hostwerk-Stil (isometrischer Block).
+
 ## 1.3.2
 
 - The example counter talks calmly like Hostwerk (no exclamation mark) – the template shows the house style. / Der Beispiel-Zähler spricht ruhig wie Hostwerk (ohne Ausrufezeichen) – die Vorlage zeigt den Hausstil.
