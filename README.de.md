@@ -4,8 +4,9 @@
 
 [English](README.md) · **Deutsch**
 
-Hier startet deine eigene Hostwerk-Erweiterung: **Use this template**, umbenennen, fertig. Lauffähige Seite, Kachel, Einstellungen, Speicher, Texte auf Deutsch und Englisch – und eine GitHub-Action, die jeden Push prüft und zu jedem Tag ein Release baut.
+![Bildschirmfoto](docs/screenshot.de.png)
 
+Hier startet deine eigene Hostwerk-Erweiterung: **Use this template**, umbenennen, fertig. Lauffähige Seite, Kachel, Einstellungen, Speicher, Texte auf Deutsch und Englisch – und eine GitHub-Action, die jeden Push prüft und zu jedem Tag ein Release baut.
 
 ## Welche Vorlage passt?
 
@@ -18,7 +19,7 @@ Hier startet deine eigene Hostwerk-Erweiterung: **Use this template**, umbenenne
 | Reiter auf Minecraft-/Webserver-Seiten, Einträge in Rechtsklick und Schnellsuche | [hostwerk-ext-template-service-tab](https://github.com/Passimoritz/hostwerk-ext-template-service-tab) |
 | ein Farbschema (Hell und Dunkel, Akzente, Rundung, Dichte) | [hostwerk-ext-template-theme](https://github.com/Passimoritz/hostwerk-ext-template-theme) |
 
-## Funktionen
+## Was sie kann
 
 - `manifest.json` mit Seite, Kachel, Einstellungen und Rechten – dazu die aktuellen SDK-Felder: `page.nav` (Platz in der Seitenleiste), `settingsTab` (Einstellungen in Hostwerks Einstellungen), `contributes.new` (Eintrag im „Neu“-Menü), `contributes.shortcuts` (Strg+Alt+M) und `allowExtensions` (andere Erweiterungen dürfen Reiter ergänzen – die [Zusatz-Vorlage](https://github.com/Passimoritz/hostwerk-ext-template-extend) nutzt das)
 - `page/app.js` – Diensteliste, Einstellungen, Zähler im Speicher, Live-Ereignisse, Fehlerzustand mit „Erneut versuchen“, Nachladen, das bei verstecktem Reiter pausiert (Schritt für Schritt kommentiert)
@@ -42,11 +43,13 @@ Hier startet deine eigene Hostwerk-Erweiterung: **Use this template**, umbenenne
 
 Läuft in Hostwerk abgeschottet – kein Zugriff auf Anmeldungen, Einstellungen oder Dateien.
 
-## Selbst bauen
+## Entwickeln
 
 Dieses Repository ist auch ein Beispiel für das [Hostwerk-Erweiterungs-SDK](https://github.com/Passimoritz/hostwerk-public/blob/main/sdk/README.de.md): Design-Baukasten, Übersetzungen, Einstellungen, Speicher, Ereignisse, Prüfung und Releases.
 
-Lizenz: MIT
+## Lizenz
+
+MIT
 
 ## Tests
 

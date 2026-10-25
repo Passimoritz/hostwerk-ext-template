@@ -2,10 +2,11 @@
 
 # Hostwerk extension template
 
-**English** · [Deutsch](README.de.md)
+[Deutsch](README.de.md)
+
+![Screenshot](docs/screenshot.png)
 
 Start your own Hostwerk extension here: **Use this template**, rename it, done. A working page, a dashboard tile, settings, storage, German and English texts – plus a GitHub Action that checks every push and publishes a release for every tag.
-
 
 ## Which template fits?
 
@@ -18,7 +19,7 @@ Start your own Hostwerk extension here: **Use this template**, rename it, done. 
 | tabs on Minecraft/web server pages, right-click and quick search entries | [hostwerk-ext-template-service-tab](https://github.com/Passimoritz/hostwerk-ext-template-service-tab) |
 | a colour theme (light and dark, accents, rounding, density) | [hostwerk-ext-template-theme](https://github.com/Passimoritz/hostwerk-ext-template-theme) |
 
-## Features
+## What it does
 
 - `manifest.json` with page, tile, settings and permissions – plus the current SDK fields: `page.nav` (place in the sidebar), `settingsTab` (settings inside Hostwerk's settings), `contributes.new` (an entry in the "New" menu), `contributes.shortcuts` (Ctrl+Alt+M) and `allowExtensions` (other extensions may add tabs – the [add-on template](https://github.com/Passimoritz/hostwerk-ext-template-extend) uses that)
 - `page/app.js` – services list, settings, storage counter, live events, error state with "Try again", polling that pauses while hidden (commented step by step)
@@ -42,11 +43,13 @@ Start your own Hostwerk extension here: **Use this template**, rename it, done. 
 
 Runs sandboxed in Hostwerk – no access to logins, settings or files.
 
-## Build your own
+## Develop
 
 This repository is also an example for the [Hostwerk extension SDK](https://github.com/Passimoritz/hostwerk-public/blob/main/sdk/README.md): design kit, translations, settings, storage, events, check and releases.
 
-License: MIT
+## License
+
+MIT
 
 ## Tests
 
