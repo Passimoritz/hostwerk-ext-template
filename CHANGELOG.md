@@ -1,3 +1,7 @@
+## 1.4.0
+
+- Shows Hostwerk’s animations (SDK 3.6) – the cards rise one after another, the empty state comes from Hostwerk and the click counter lights up – and how to stay compatible with older Hostwerk versions (`typeof Hostwerk.ui.animate`). / Zeigt Hostwerks Animationen (SDK 3.6) – Karten erscheinen nacheinander, der leere Zustand kommt von Hostwerk, der Klickzähler leuchtet auf – und wie man mit älteren Hostwerk-Versionen verträglich bleibt.
+
 ## 1.3.3
 
 - New animated icon and banner in the common Hostwerk style (isometric block). / Neues animiertes Symbol und Banner im gemeinsamen Hostwerk-Stil (isometrischer Block).

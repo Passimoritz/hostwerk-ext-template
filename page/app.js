@@ -1,5 +1,9 @@
 // Template page – everything an extension usually needs, in small steps.
 const { html, t } = Hostwerk;
+// Hostwerk's animations (SDK 3.6): Hostwerk.ui.animate/countUp/empty and the hw-* classes. They stop by themselves with
+// "Reduce animations". Older Hostwerk versions don't have them yet – so ask first and simply show the result without motion.
+const motion = typeof Hostwerk.ui.animate === 'function';
+let firstPaint = true;
 
 // Show the services. Hostwerk.html escapes every ${value}, so names can never break the page.
 async function loadServices() {
@@ -21,7 +25,10 @@ async function loadServices() {
           <div class="row"><span class="dot ${s.state === 'running' ? 'ok' : ''}"></span><b class="grow ellipsis">${s.name}</b>
           <span class="badge ${s.state === 'running' ? 'ok' : ''}">${t(s.state === 'running' ? 'running' : 'stopped')}</span></div>
         </div>`)}`
-    : html`<div class="card card-pad empty"><b>${t('empty')}</b></div>`);
+    : motion ? html`<div class="card">${Hostwerk.ui.empty({ title: t('empty') })}</div>` : html`<div class="card card-pad empty"><b>${t('empty')}</b></div>`);
+  // The cards rise one after another – only the first time, not on every refresh
+  if (motion && firstPaint && list.length) Hostwerk.ui.animate('#list', 'stagger');
+  firstPaint = false;
 }
 
 // A greeting from the settings (the form is drawn by Hostwerk from manifest.settings – here in Settings → Extensions).
@@ -39,7 +46,8 @@ async function countClick() {
   try {
     const n = ((await Hostwerk.storage.get('clicks')) || 0) + 1;
     await Hostwerk.storage.set('clicks', n);
-    showCounter();
+    await showCounter();
+    if (motion) Hostwerk.ui.animate('#counter', 'flash'); // the new value lights up briefly
     if (n % 5 === 0) Hostwerk.toast(t('milestone', { n }), { kind: 'success' });
   } catch (e) { Hostwerk.toast(MyExtension.errorText(e), { kind: 'error' }); }
 }
