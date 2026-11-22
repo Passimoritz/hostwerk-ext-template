@@ -1,3 +1,7 @@
+## 1.4.1
+
+- Explains in the page why it looks the way it does (embedding contract: kit classes and variables only, no fixed widths or colours, no `<h1>`, texts via data-i18n) and states "sdkVersion": "3.0". The new embedding check (node check.js, Extensions → Details → Embedding) shows green. / Erklärt in der Seite, warum sie so aussieht (Einbettungs-Vertrag: nur Baukasten-Klassen und Variablen, keine festen Breiten oder Farben, kein `<h1>`, Texte über data-i18n), und nennt „sdkVersion“: „3.0“. Die neue Einbettungs-Prüfung (node check.js, Erweiterungen → Details → Einbettung) zeigt Grün.
+
 ## 1.4.0
 
 - Shows Hostwerk’s animations (SDK 3.6) – the cards rise one after another, the empty state comes from Hostwerk and the click counter lights up – and how to stay compatible with older Hostwerk versions (`typeof Hostwerk.ui.animate`). / Zeigt Hostwerks Animationen (SDK 3.6) – Karten erscheinen nacheinander, der leere Zustand kommt von Hostwerk, der Klickzähler leuchtet auf – und wie man mit älteren Hostwerk-Versionen verträglich bleibt.

@@ -7,6 +7,12 @@
   <script src="/ext-sdk.js"></script>
 </head>
 <body>
+  <!-- Embedding contract (SDK guide, "Embed cleanly") – why the page looks like this:
+       • only Hostwerk's kit classes (card, btn, row …) and variables (var(--sp-*), var(--surface) …): light/dark, accent and density follow Hostwerk
+       • no own colours, fonts or fixed widths – at 1024×700 a page gets about 720 px
+       • nothing with position: fixed, no <h1> (Hostwerk draws icon, title and description above the page)
+       • every visible text through data-i18n / Hostwerk.t() – German and English from locales/
+       "node check.js ." shows the result as a traffic light (Embedding); green = nothing to do. -->
   <!-- 2) Texts come from locales/de.json and locales/en.json – data-i18n="key" fills them in.
        Sizes only from the design scale (var(--sp-*), var(--fs-*), var(--r-*)) – then the page follows Hostwerk's design. -->
   <p class="muted" id="hello" data-i18n="intro"></p>
